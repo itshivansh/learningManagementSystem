@@ -1,0 +1,17 @@
+.card-body{
+    background-color: #04070c;
+    color:white;
+  }
+  .container{
+      color: whitesmoke;
+  }
+  #home{
+      background-color: #04070c ;
+      margin-bottom: 0%;
+      padding-bottom: 0%;
+  }
+  .jumbotron{
+      background-color: #04070c;
+      margin-bottom: 0%;
+      padding-bottom: 0%;
+  }

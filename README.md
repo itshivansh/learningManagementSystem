@@ -1,43 +1,27 @@
-# Hackathon-Online Courses-LMS
+# VikramServiceApp
 
-`Angular Hackathon-Online Courses-LMS`
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
+## Development server
 
-1. Readme.md
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-2. .gitignore
+## Code scaffolding
 
-3. Courses::C#, ASP.Net core, Html5,SPA using Angular
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-4. Display courses using Cards
+## Build
 
-5. Create db.json
-  consume from db.json using HttpClient
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-6. Create Components
+## Running unit tests
 
-  ```
-  AppComponent
-  HeaderComponent
-  NavComopnent
-  DashboardComponent
-  LoginComponent
-  RegisterComponent
-  SignOutCompoent
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-  ```
+## Running end-to-end tests
 
-7. Required Services
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-8. Use CanActivateGuard
+## Further help
 
-9. Try to strore username and password in localstorage
-
-10. Implement Unit Testing and End to Testing for `Online Courses-LMS`
-
-  
-11. Attach screenshot in Readme.md and update Repository link in 
-    Tracker
-   
-
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
