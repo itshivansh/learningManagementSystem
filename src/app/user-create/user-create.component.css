@@ -1,0 +1,15 @@
+.jumbotron{
+    text-align: center;
+    font-size: larger;
+    color: black;
+   
+}
+
+.add{
+    width: 300px;
+    margin: auto;
+    margin-bottom: 150px;
+}
+.submit{
+    text-align: center;
+}

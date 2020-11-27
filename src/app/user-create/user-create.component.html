@@ -1,18 +1,22 @@
 <div class="jumbotron">
-    Add Student
+  HAPPY LEARNING
 </div>
-<form [formGroup]="addStudent" (ngSubmit)="createStudent">
+<div class="add">
+  <form [formGroup]="addStudent" (ngSubmit)="createStudent">
     <div class="form-group">
       <label>Name</label>
-      <input type="text" class="form-control"placeholder = "Enter name" formControlName="name">
+      <input type="text" class="form-control" placeholder="Enter name" formControlName="name">
     </div>
     <div class="form-group">
-        <label>Description</label>
-        <input type="text" class="form-control"placeholder = "Enter description"  formControlName="description">
-      </div>
-      <div class="form-group">
-        <label>Email address</label>
-        <input type="email" class="form-control"placeholder = "Enter email"  formControlName="email" >
-      </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+      <label>Description</label>
+      <input type="text" class="form-control" placeholder="Enter description" formControlName="description">
+    </div>
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+    </div>
+    <div class="submit">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
   </form>
+</div>
