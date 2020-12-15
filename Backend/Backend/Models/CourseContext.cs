@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using Microsoft.Extensions.Configuration;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,11 @@ namespace Backend.Models
 
         public CourseContext(IConfiguration config)
         {
+            client = new MongoClient(config.GetSection("MongoDB:server").Value);
+            database = client.GetDatabase(config.GetSection("MongoDB:db").Value);
 
         }
-        {
-
-        }
+        public IMongoCollection<Course> Courses => database.GetCollection<Course>("Courses");
+        
     }
 }
