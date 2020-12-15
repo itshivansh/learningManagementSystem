@@ -1,6 +1,6 @@
 using System;
 
-namespace Backend
+namespace AuthApi
 {
     public class WeatherForecast
     {

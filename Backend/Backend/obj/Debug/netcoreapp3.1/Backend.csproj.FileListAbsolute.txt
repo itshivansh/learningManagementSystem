@@ -8,3 +8,15 @@ C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend
 C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.RazorTargetAssemblyInfo.cache
 C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\obj\Debug\netcoreapp3.1\staticwebassets\Backend.StaticWebAssets.Manifest.cache
 C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\obj\Debug\netcoreapp3.1\staticwebassets\Backend.StaticWebAssets.xml
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\runtimes\win\native\libzstd.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy32.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.csproj.CopyComplete
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.csproj.CoreCompileInputs.cache
+C:\Users\adminvm.adminvm\Desktop\New folder\hackathon-online-courses-lms\Backend\Backend\obj\Debug\netcoreapp3.1\Backend.MvcApplicationPartsAssemblyInfo.cache
