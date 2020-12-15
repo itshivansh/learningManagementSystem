@@ -1,0 +1,52 @@
+{
+  "course": [
+    {
+      "name": "Megha",
+      "email": "megha@gmail.com",
+      "course": "C#",
+      "id": 1
+    },
+    {
+      "name": "kiran",
+      "email": "kiran@gmail.com",
+      "course": "Asp .netcore",
+      "id": 2
+    },
+    {
+      "name": "Anu",
+      "email": "anu@gmail.com",
+      "course": "C#",
+      "id": 3
+    },
+    {
+      "name": "varun",
+      "email": "varun@gmail.com",
+      "course": "SAP",
+      "id": 4
+    },
+    {
+      "name": "Sandya",
+      "email": "sandya@gmail.com",
+      "course": "HTML5",
+      "id": 5
+    },
+    {
+      "name": "sannidhi",
+      "email": "sannidhi@gmail.com",
+      "course": "HTML5",
+      "id": 6
+    },
+    {
+      "name": "vidya",
+      "email": "vidya@gmail.com",
+      "course": "HTML5",
+      "id": 7
+    },
+    {
+      "name": "Meghana K G",
+      "email": "meghana1613@gmail.com",
+      "course": "ASP .NETcore",
+      "id": 8
+    }
+  ]
+}

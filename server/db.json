@@ -1,9 +1,0 @@
-{
-    "users":
-    [
-    {"id":1,"name":"Ambar","description":"Ambar Details","email":"ambar@ara.com"},
-    {"id":2,"name":"Utk","description":"Utk Details","email":"utk@email.com"},
-    {"id":3,"name":"Sid","description":"Sid Details","email":"Sid@email.com"},
-    {"id":4,"name":"PP","description":"PP Details","email":"PP@email.com"}
-  ]
-}
