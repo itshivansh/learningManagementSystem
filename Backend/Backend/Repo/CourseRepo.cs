@@ -1,12 +1,11 @@
 ﻿using Backend.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using MongoDB.Driver;
 
 namespace Backend.Repo
 {
+    #region Repo
     public class CourseRepo : ICourseRepo
     {
         CourseContext context;
@@ -16,12 +15,15 @@ namespace Backend.Repo
         {
             context = _context;
         }
+        #region Add
         public Course AddCourse(Course course)
         {
             context.Courses.InsertOne(course);
             return course;
         }
+        #endregion
 
+        #region Delete
         public bool DeleteCourse(int id)
         {
             {
@@ -29,17 +31,23 @@ namespace Backend.Repo
                 return deletedStatus.IsAcknowledged && deletedStatus.DeletedCount > 0;
             }
         }
+        #endregion
 
+        #region GetById
         public List<Course> GetCourseById(int id)
         {
             return context.Courses.Find(x => x.Id == id).ToList();
         }
+        #endregion
 
+        #region Get
         public List<Course> GetCourses()
         {
-            return context.Courses.Find(x => x.Id == id).ToList();
+            return context.Courses.Find(x => true).ToList();
         }
+        #endregion
 
+        #region ExistenceCheck
         public bool IsCourseExist(Course course)
         {
             {
@@ -55,8 +63,9 @@ namespace Backend.Repo
 
             }
         }
+        #endregion
 
-
+        #region ExistenceWithId
         bool ICourseRepo.IsCourseExistWithId(int id)
         {
 
@@ -70,8 +79,10 @@ namespace Backend.Repo
                 return false;
             }
         }
+        #endregion
 
-            
+
     }
-    
+    #endregion
+
 }

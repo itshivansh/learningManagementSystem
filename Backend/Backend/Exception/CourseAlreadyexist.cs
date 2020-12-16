@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Backend.Exception
 {
+    #region Start
     public class CourseAlreadyexist:ApplicationException
     {
         public CourseAlreadyexist()
@@ -16,4 +14,5 @@ namespace Backend.Exception
 
         }
     }
+    #endregion
 }

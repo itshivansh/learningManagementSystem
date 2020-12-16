@@ -1,12 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Backend.Models
 {
+    #region Context
     public class CourseContext
     {
         MongoClient client;
@@ -22,4 +19,5 @@ namespace Backend.Models
         public IMongoCollection<Course> Courses => database.GetCollection<Course>("Courses");
         
     }
+    #endregion
 }

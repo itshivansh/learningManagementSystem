@@ -1,13 +1,11 @@
 ﻿using Backend.Exception;
 using Backend.Models;
 using Backend.Repo;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Backend.ServiceLayer
 {
+    #region Service
     public class CourseService : ICourseService
     {
         private readonly ICourseRepo _courseRepository;
@@ -15,6 +13,8 @@ namespace Backend.ServiceLayer
         {
             _courseRepository = courseRepository;
         }
+
+        #region Add
         Course ICourseService.AddCourse(Course course)
         {
             var courseAvailablity = _courseRepository.IsCourseExist(course);
@@ -27,6 +27,9 @@ namespace Backend.ServiceLayer
                 throw new CourseAlreadyexist("course already existy");
             }
         }
+        #endregion
+
+        #region Delete
 
         bool ICourseService.DeleteCourse(int id)
         {
@@ -40,7 +43,9 @@ namespace Backend.ServiceLayer
                 throw new CourseNotFound("Course does not exist");
             }
         }
+        #endregion
 
+        #region GetById
         List<Course> ICourseService.GetCourseById(int id)
         {
             var courseAvailablity = _courseRepository.IsCourseExistWithId(id);
@@ -53,10 +58,14 @@ namespace Backend.ServiceLayer
                 throw new CourseNotFound("Course does not exist");
             }
         }
+        #endregion
 
+        #region Get
         List<Course> ICourseService.GetCourses()
         {
             return _courseRepository.GetCourses();
         }
+        #endregion
     }
+    #endregion
 }

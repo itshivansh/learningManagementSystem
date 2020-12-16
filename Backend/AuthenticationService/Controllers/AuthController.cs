@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 using AuthenticationService.Exceptions;
 using AuthenticationService.models;
 using AuthenticationService.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 
 namespace AuthenticationService.Controllers
 {
+    #region Start
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -107,4 +104,5 @@ namespace AuthenticationService.Controllers
             return JsonConvert.SerializeObject(response);
         }
     }
+    #endregion
 }

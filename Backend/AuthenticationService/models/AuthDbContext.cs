@@ -1,12 +1,8 @@
-﻿
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace AuthenticationService.models
 {
+    #region Context
     public class AuthDbContext : DbContext
     {
         public AuthDbContext(DbContextOptions options) : base(options)
@@ -16,4 +12,5 @@ namespace AuthenticationService.models
 
         public DbSet<User> Users { get; set; }
     }
+    #endregion
 }

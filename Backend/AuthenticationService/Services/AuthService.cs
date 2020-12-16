@@ -1,13 +1,10 @@
 ﻿using AuthenticationService.Exceptions;
 using AuthenticationService.models;
 using AuthenticationService.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AuthenticationService.Services
 {
+    #region Service
     public class AuthService : IAuthService
     {
         private readonly IAuthRepository authRepository;
@@ -42,4 +39,5 @@ namespace AuthenticationService.Services
             }
         }
     }
+    #endregion
 }

@@ -1,12 +1,10 @@
 ﻿using Backend.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Backend.ServiceLayer
 {
     public interface ICourseService
+    #region Service_Interface
 
     {
         Course AddCourse(Course course);
@@ -17,4 +15,5 @@ namespace Backend.ServiceLayer
 
         bool DeleteCourse(int id);
     }
+    #endregion
 }

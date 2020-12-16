@@ -1,11 +1,9 @@
 ﻿using AuthenticationService.models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace AuthenticationService.Repository
 {
+    #region Start
     public class AuthRepository : IAuthRepository
     {
         private readonly AuthDbContext authDbContext;
@@ -40,4 +38,5 @@ namespace AuthenticationService.Repository
             return false;
         }
     }
+    #endregion
 }
