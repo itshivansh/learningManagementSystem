@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Backend.Models;
 using Backend.Repo;
 using Backend.ServiceLayer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,7 +15,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace Backend
 {
@@ -29,9 +32,6 @@ namespace Backend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddControllers(); 
-            services.AddMvc();
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Category API", Version = "v1" });
@@ -60,12 +60,12 @@ namespace Backend
                 });
             });
 
-            // this.ValidateToken(Configuration, services);
+            this.ValidateToken(Configuration, services);
+
+            services.AddControllers();
             services.AddScoped<CourseContext>();
             services.AddScoped<ICourseRepo, CourseRepo>();
-            services.AddScoped<ICourseService, ServiceLayer.CourseService>();
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddScoped<ICourseService, CourseService>();
 
         }
 
@@ -78,31 +78,26 @@ namespace Backend
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
 
             app.UseRouting();
 
             app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            }); if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            //app.UseAuthentication();
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
-            app.UseMvc();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
         private void ValidateToken(IConfiguration configuration, IServiceCollection services)
         {
             var audienceconfig = configuration.GetSection("Audience");
-            var secretkey = audienceconfig["key"];
+            var secretkey = audienceconfig["Secret"];
             var keybyteArray = Encoding.ASCII.GetBytes(secretkey);
             var signature = new SymmetricSecurityKey(keybyteArray);
 
@@ -126,5 +121,6 @@ namespace Backend
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(o => { o.TokenValidationParameters = tokenValidationParameters; });
         }
+
     }
 }

@@ -56,21 +56,22 @@ namespace Backend.Repo
             }
         }
 
-        public bool IsCourseExistWithId(int id)
-        {
-            bool ICourseRepository.IsCourseExistWithId(int id)
-        {
-                var courseExist = context.Courses.Find(x => x.Id == id).FirstOrDefault();
-                if (courseExist != null)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
 
+        bool ICourseRepo.IsCourseExistWithId(int id)
+        {
+
+            var courseExist = context.Courses.Find(x => x.Id == id).FirstOrDefault();
+            if (courseExist != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
+
+            
     }
+    
 }

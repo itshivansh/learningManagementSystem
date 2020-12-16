@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Backend.Exception;
 using Backend.Models;
 using Backend.ServiceLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CourseController : ControllerBase
